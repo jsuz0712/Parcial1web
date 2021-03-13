@@ -574,6 +574,9 @@ div#ancla-combos {
         height: 93px;
         margin: 0 auto;
         float: none;}
+
+    header article figure a img {float: left; left: -70px;}    
+    
     
     header article nav { display: none;}
 
