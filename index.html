@@ -57,6 +57,9 @@
 
 <body>
 
+
+
+
     <!-- Menu para mobiles -->
     <aside id="menu_para_mobiles">
         <a href="#" id="abrir">
@@ -68,9 +71,9 @@
 
         <nav id="menu-nav">
             <a href="#ancla-burger">HotDogs</a>
-            <a href="#ancla-beverage">Hamburguesas</a>
+            <a href="#ancla-beverage">Burgers</a>
             <a href="#ancla-combos">Combos</a>
-            <a href="#ancla-pizzas">Bebidas</a>
+            <a href="#ancla-pizzas">Beverages</a>
         </nav>
     </aside>
 
@@ -80,16 +83,19 @@
         <a href="https://wa.me/573005329537?text=Hola%20gustaría%20realizar%20un%20pedido%20" class="whatsapp"
             target="_blank"> <i class="fab fa-whatsapp whatsapp-icon"></i>
         </a>
-
-
-
     </aside>
+    
+    <div id="shop-list"></div> 
+        <div id="menu-cart" class="hidden">
+            <h2>Cart</h2>
+            <ul id="list-items">
 
-
-   
-
-
-
+            </ul>
+            <div id="cart-total-price">Total: $0.00</div>
+            <button id="clear-cart-button" onclick="clearCart()">Clear Cart</button>
+        </div>
+        <div id="cart-total"></div>
+    
     <!-- Componente Header Logo al centro -->
     <header>
         <article>
@@ -101,9 +107,9 @@
             </figure>
             <nav id="menu.nav">
                 <a href="#ancla-burger">HotDogs</a>
-                <a href="#ancla-beverage">Hamburguesas</a>
+                <a href="#ancla-beverage">Burgers</a>
                 <a href="#ancla-combos">Combos</a>
-                <a href="#ancla-pizzas">Bebidas</a>
+                <a href="#ancla-pizzas">Beverages</a>
             </nav>
 
         </article>
@@ -124,10 +130,11 @@
                 <div class="zona-del-menu">
                     <figure>
                         <img src="img2/super_dogo1.png">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="1">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Super Dogo</h4><!-- Nombre de la comida -->
+                            <h4>1. Super Dogo</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan, Salchica (a eleccion), Lomito o Pollo, Tocineta, Queso Cheddar, Cebolla a la Grille, Papita Chongo y Queso.</p>
+                            <button class="add-cart" onclick="addToCart(1)">Add To Cart</button>
                             <!-- Informacion de que contiene la hamburgesa -->
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$14.000</p><!-- Precio del producto -->
@@ -136,11 +143,12 @@
                     
                     <figure>
                         <img src="img2/Pulled_Pork.png">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="2">
                             <h5 class="new">Nuevo</h5><!-- Titulo de Recomendado -->
-                            <h4>Pulled Pork</h4><!-- Nombre de la comida -->
+                            <h4>2. Pulled Pork</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan, Salchica Alemana, Cerdo en salsa BBQ, Queso, Papita Chongo y Salsas.</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(2)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$14.000</p><!-- Precio del producto -->
                         </div>
@@ -148,11 +156,12 @@
 
                     <figure>
                         <img src="img2/Aleman.png">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="3">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Aleman</h4><!-- Nombre de la comida -->
+                            <h4>3. Aleman</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan, Salchica Alemana, Queso Mozarella, Miel Mostaza, Chipotle, Papita Chongo y Cebollino Fresco.</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(3)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$12.000</p><!-- Precio del producto -->
                         </div>
@@ -160,11 +169,12 @@
 
                     <figure>
                         <img src="img2/Pizza1.png">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="4">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Pizza</h4><!-- Nombre de la comida -->
+                            <h4>4. Pizza</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan, Salchica, Queso Mozarella, Peperoni, Salsa Napolitana, Oregano, Papita Chongo.</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(4)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$12.000</p><!-- Precio del producto -->
                         </div>
@@ -172,11 +182,12 @@
 
                     <figure>
                         <img src="img2/Ranchero.png">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="5">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Ranchero</h4><!-- Nombre de la comida -->
+                            <h4>5. Ranchero</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan, Salchica Ranchera, Salsa BBQ, Queso Mozarella, Trocitos De Tocineta y Salsas.</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(5)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$12.000</p><!-- Precio del producto -->
                         </div>
@@ -184,11 +195,12 @@
 
                     <figure>
                         <img src="img2/Mexicano.png">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="6">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Mexicano</h4><!-- Nombre de la comida -->
+                            <h4>6. Mexicano</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan, Salchica, Queso, Papita Chongo, Lechuga, Pico De Gallo, Queso Cheddar.</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(6)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$12.000</p><!-- Precio del producto -->
                         </div>
@@ -226,11 +238,12 @@
                 <div class="zona-del-menu">
                     <figure>
                         <img src="img2/bacoon_cheese.jpg">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="7">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Bacon Cheese</h4><!-- Nombre de la comida -->
+                            <h4>7. Bacon Cheese</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan Artesanal, Carne, Tocineta, Queso Americano y Salsas.</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(7)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$12.000</p><!-- Precio del producto -->
                         </div>
@@ -240,11 +253,12 @@
 
                     <figure>
                         <img src="img2/doble_carne.png">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="8">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Doble Carne</h4><!-- Nombre de la comida -->
+                            <h4>8. Doble Carne</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan Artesanal, Doble Carne, Doble Queso, Lechuga, Tomate y Cebolla Grille.</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(8)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$15.000</p><!-- Precio del producto -->
                         </div>
@@ -252,11 +266,12 @@
 
                     <figure>
                         <img src="img2/Pulled_Pork2.png">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="9">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Pulled Pork</h4><!-- Nombre de la comida -->
+                            <h4>9. Pulled Pork</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan Artesanal, Cerdo en salsa BBQ, Queso Mozarella y Lechuga.  </p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(9)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$16.000</p><!-- Precio del producto -->
                         </div>
@@ -264,11 +279,12 @@
 
                     <figure>
                         <img src="img2/premium_burger.png">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="10">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Premium Burger</h4><!-- Nombre de la comida -->
+                            <h4>10. Premium Burger</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Pan Artesanal, Doble Carne, Tocineta, Tres Quesos (Mozarella, Americano y Cheddar), Lechuga, Tomate y Grille.</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(10)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$20.000</p><!-- Precio del producto -->
                         </div>
@@ -290,11 +306,12 @@
                 <div class="zona-del-menu">
                     <figure>
                         <img src="img2/botella_agua.jpg">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="11">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Botella De Agua</h4><!-- Nombre de la comida -->
+                            <h4>11. Bottle Of Water</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">(600ml)</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(11)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$2.000</p><!-- Precio del producto -->
                         </div>
@@ -304,11 +321,12 @@
 
                     <figure>
                         <img src="img2/coca.jpg">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="12">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Gaseosa</h4><!-- Nombre de la comida -->
+                            <h4>12. Soda Pop</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Coca Cola, Manzana, Uva</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(12)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$3.000</p><!-- Precio del producto -->
                         </div>
@@ -316,11 +334,12 @@
 
                     <figure>
                         <img src="img2/te.jpg">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="13">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Té</h4><!-- Nombre de la comida -->
+                            <h4>13. Té</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Mr Tea Durazno (500ml)</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(13)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$3.000</p><!-- Precio del producto -->
                         </div>
@@ -328,11 +347,12 @@
 
                     <figure>
                         <img src="img2/hit.jpg">
-                        <div class="info-de-producto">
+                        <div class="info-de-producto" data-id="14">
                             <h5 class="reco">Recomendado</h5><!-- Titulo de Recomendado -->
-                            <h4>Jugo Hit</h4><!-- Nombre de la comida -->
+                            <h4>14. Juice Hit</h4><!-- Nombre de la comida -->
                             <p class="texto-del-producto">Mora y Tropical (500ml)</p>
                             <!-- Informacion de que contiene la hamburgesa -->
+                            <button class="add-cart" onclick="addToCart(14)">Add To Cart</button>
                             <div class="puntos">........</div><!--  -->
                             <p class="precio-del-producto">$3.000</p><!-- Precio del producto -->
                         </div>
@@ -391,6 +411,7 @@
 
     <!-- Zona para cargar todo el JavaScript -->
     <script src="js/myscript.js"></script>
+    <script src="js/javascript.js"></script>
 </body>
 
 </html>

@@ -27,6 +27,14 @@ h1, h2, h3, h4, h5, h6, p, figure {margin: 0;}
 
 nav a {font-family: 'Josefin Sans', sans-serif;}
 
+.add-cart{
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Poppins', sans-serif;
+    border: 0px;
+    border-radius: 5px;
+}
+
 
 /* Menu Para mobiles */
 
@@ -136,6 +144,104 @@ aside#whatsapp-boton-flotante {
     left: 20px;
     z-index: 9980;}
 
+#shop-list{
+    z-index: 9980;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: url('/svg/cart-shopping-svgrepo-com.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+}    
+
+#cart-total{
+    z-index: 9950;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width: 50px;
+    height: 50px;    
+}
+
+#clear-cart-button{
+    margin: 10px;
+    border: #000000 0px solid;
+    border-radius: 10px
+}
+
+#cart-total-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+#menu-cart{
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 500px;
+    background-color: #000000b3;
+    border: 1px solid #525151;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.149);   
+    z-index: 9998;
+    border-radius: 20px;
+}
+
+#menu-cart h2{
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+#cart-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Ajusta según sea necesario */
+    font-family: 'Roboto', sans-serif;
+}
+
+.remove-button {
+    background-color: #000000; /* Color de fondo rojo */
+    color: #ffffff; /* Color del texto blanco */
+    padding: 5px 10px; /* Ajusta el relleno (padding) según sea necesario */
+    border: none; /* Elimina el borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+    border-radius: 20px;
+}
+
+.remove-button:hover {
+    background-color: #3a3737; /* Cambia el color de fondo al pasar sobre el botón */
+}
+
+
+#menu-cart.hidden {
+    display: none !important;
+  }
+
+#menu-cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #menu-cart li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #menu-cart li:hover {
+    transition: all 0.3s ease-in;
+    background-color: #ffffff16;
+  }
+
 aside#whatsapp-boton-flotante a {
     width: 100%;
     height: auto;
@@ -151,6 +257,7 @@ aside#whatsapp-boton-flotante a {
     border-radius: 50%;
     transition: all 0.3s ease-in;
 }
+
 
 aside#whatsapp-boton-flotante a:hover {
     transform: scale(1.09); transition: all 0.3s ease-in;
@@ -170,12 +277,12 @@ header {
     position: fixed;
     float: none;
     margin: 0px;
-    height: 90px;
+    height: 100px;
     width: 100%; }
 
 header article {
     position: relative;
-    float: none;
+    float: left;
     margin: 0px;
     height: 90px;
     width: 1100px; }
@@ -489,7 +596,7 @@ section#combos article nav a:hover {
 footer {
     width: 100%;
     padding: 10px 0;
-    height: 132px;
+    height: auto;
     margin: 0 auto;
     float: none;
     position: relative;

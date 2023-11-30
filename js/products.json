@@ -1,0 +1,74 @@
+{
+    "Products": [
+        {
+            "id": 1,
+            "Name": "Super Dogo",
+            "Price": 14000
+        },
+        {
+            "id": 2,
+            "Name": "Pulled Pork",
+            "Price": 14000
+        },
+        {
+            "id": 3,
+            "Name": "Aleman",
+            "Price": 12000
+        },
+        {
+            "id": 4,
+            "Name": "Pizza",
+            "Price": 12000
+        },
+        {
+            "id": 5,
+            "Name": "Ranchero",
+            "Price": 12000
+        },
+        {
+            "id": 6,
+            "Name": "Mexicano",
+            "Price": 12000
+        },
+        {
+            "id": 7,
+            "Name": "Bacon Cheese",
+            "Price": 12000
+        },
+        {
+            "id": 8,
+            "Name": "Doble Carne",
+            "Price": 15000
+        },
+        {
+            "id": 9,
+            "Name": "Pulled Pork",
+            "Price": 16000
+        },
+        {
+            "id": 10,
+            "Name": "Premium Burger",
+            "Price": 20000
+        },
+        {
+            "id": 11,
+            "Name": "Bottle Of Water",
+            "Price": 2000
+        },
+        {
+            "id": 12,
+            "Name": "Soda Pop",
+            "Price": 3000
+        },
+        {
+            "id": 13,
+            "Name": "Té",
+            "Price": 3000
+        },
+        {
+            "id": 14,
+            "Name": "Juice Hit",
+            "Price": 3000
+        }
+    ]
+}
